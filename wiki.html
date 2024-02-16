@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimePilot - Wiki</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+    <style>
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-container">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="wiki.html" class="nav-link">Wiki</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>TimePilot Wiki</h1>
+
+        <div class="section" id="earlyHistory">
+
+        
+            <div class="section">
+                <h2>Sentinels</h2>
+                <img src="media/robots.jpg" alt="Descriptive text for the image" class="section-img">    
+                    <h3>Overview</h3>
+                        <p>Sentinels are a race of advanced, sentient robots with the unique ability to transform into various mechanical forms, ranging from vehicles to weaponry and even the most esoteric objects. Originating from a distant and highly advanced civilization, Sentinels possess sophisticated artificial intelligence, enabling them to think, feel, and make decisions independently. All of their life and power is derived from Transforming Crystals which power each Sentinel. They are central to the "TimePilot" campaign, where they play pivotal roles across various timelines and settings.</p>
+                <h3>Factions</h3>
+                    <div class="section" id="decryptingArchive">
+                        <h2 class="decrypting-header">Decrypting Entry</h2>
+                        <div id="decryptingContent" class="decrypting-content">
+                            <script>
+                                function startDecryption() {
+                                    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz";
+                                    const length = 225; // Length of the decrypting content
+                                    let decryptingText = '';
+                                
+                                    for (let i = 0; i < length; i++) {
+                                        decryptingText += chars.charAt(Math.floor(Math.random() * chars.length));
+                                    }
+                                
+                                    const decryptingElement = document.getElementById('decryptingContent');
+                                    decryptingElement.textContent = decryptingText;
+                                
+                                    // Update a portion of the text periodically to simulate decryption
+                                    setInterval(() => {
+                                        let updatedText = '';
+                                        for (let i = 0; i < decryptingText.length; i++) {
+                                            // Randomly decide whether to change this character
+                                            if (Math.random() < 0.05) { // Adjust the probability to control the frequency of changes
+                                                updatedText += chars.charAt(Math.floor(Math.random() * chars.length));
+                                            } else {
+                                                updatedText += decryptingText.charAt(i);
+                                            }
+                                        }
+                                        decryptingText = updatedText;
+                                        decryptingElement.textContent = decryptingText;
+                                    }, 5); // Adjust the interval for faster or slower "decryption"
+                                }                 
+                                // Start the animation when the page loads
+                                window.onload = startDecryption;
+                            </script>                    
+                        </div>
+                    </div> 
+            </div>
+    </div>
+</body>
+</html>

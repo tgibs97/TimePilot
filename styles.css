@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensure at least full viewport height */
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column; /* Organize content in a column */
+}
+header {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 0;
+    width: 100%;
+}
+.nav-container {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.nav-item {
+    margin: 0 20px;
+}
+.nav-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+.content {
+    flex: 1; /* Fill available space */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+  /*justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 20px; /* Add some padding */
+}
+.welcome-message {
+    text-align: center;
+    background-color: rgba(247, 203, 7, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+h2 {
+    color: #007bff;
+}
+p {
+    line-height: 1.6;
+}
+ul {
+    margin: 10px 0;
+}
+.section {
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #7ed6ffa2; /* Dark blue, adjust the color to fit your design */
+    font-size: 1.25rem; /* Larger text for clear hierarchy, adjust size as needed */
+    margin-top: 20px; /* Adds space above the heading */
+    margin-bottom: 10px; /* Adds space below the heading */
+    font-weight: bold; /* Makes the text bold */
+    text-align: left; /* Aligns the text to the left, you can change it to center if needed */
+}
+
+h4 {
+    color: #007bff; /* Lighter blue, for a subtle contrast with h3 */
+    font-size: 1.25rem; /* Slightly smaller than h3, adjust size as needed */
+    margin-top: 15px; /* Adds space above the heading */
+    margin-bottom: 8px; /* Adds space below the heading */
+    font-weight: normal; /* Keeps the text at normal weight for less emphasis than h3 */
+    text-align: left; /* Aligns the text to the left, you can change it to center if needed */
+    text-decoration: underline; /* Optionally, you can underline h4 headings */
+}
+
+
+.decrypting-content {
+    background-color: #000;
+    color: #0f0;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    width: auto; /* Ensures the container width is responsive */
+    max-width: 500px; /* Adjust based on your layout, ensures it doesn't exceed this width */
+    overflow-wrap: break-word; /* Ensures long words can break and wrap to the next line */
+    white-space: pre-wrap; /* Allows text to wrap and preserves whitespace */
+    height: auto; /* Adjust height as necessary, 'auto' lets it expand with content */
+    max-height: 1000px; /* You can set a max-height if you want to limit how tall the box can grow */
+    overflow-y: auto; /* Adds a scrollbar if the content exceeds the container's height */
+}
+
+.decrypting-header {
+    background-color: #000;
+    color: #0f0;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+#decryptingArchive {
+    max-width: 500px; /* Adjust based on your layout, ensures it doesn't exceed this width */
+    background-color: #000;
+}
+
+.section-wrapper {
+    display: flex;
+    align-items: flex-start; /* Aligns items to the top */
+    justify-content: space-between; /* Spaces out the section and image */
+    margin-bottom: 20px; /* Adds some space below each section for separation */
+}
+
+.section-img {
+    width: 500px; /* Sets a fixed width for the image */
+    height: auto; /* Maintains the aspect ratio of the image */
+    flex-shrink: 0; /* Prevents the image from shrinking if space is tight */
+    display: block;
+    margin: 10px auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1270px) {
+    .section-wrapper {
+        flex-direction: column; /* Stack the section and image vertically */
+    }
+
+    .section {
+        max-width: 100%; /* Allow the section to use full width */
+    }
+
+    .section-img {
+        order: -1; /* Move the image above the section content */
+        width: 100%; /* Adjust the image width to be responsive */
+        max-width: 300px; /* Optional: limit the image size */
+        height: auto; /* Maintain aspect ratio */
+        margin: 0 auto 20px; /* Center the image and add some margin below */
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+    }
+    .nav-item {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-item {
+        margin: 8px 0;
+    }
+    .welcome-message {
+        font-size: 90%;
+    }
+}
