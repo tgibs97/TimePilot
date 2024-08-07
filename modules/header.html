@@ -1,0 +1,24 @@
+<header>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation" aria-expanded="false"
+        aria-controls="navMenu">☰</button>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("navMenu");
+            var button = document.querySelector('.hamburger');
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+                button.setAttribute('aria-expanded', 'false');
+            } else {
+                menu.style.display = "flex";
+                button.setAttribute('aria-expanded', 'true');
+            }
+        }
+    </script>
+    <nav>
+        <ul id="navMenu" class="nav-container">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="wiki.html" class="nav-link">Wiki</a></li>
+            <li class="nav-item"><a href="tp3.html" class="nav-link">TimePilot 3</a></li>
+        </ul>
+    </nav>
+</header>

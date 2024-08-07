@@ -1,0 +1,28 @@
+body {
+    background-color: black;
+    color: green;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.terminal {
+    width: 80%;
+    margin: 100px auto;
+    padding: 20px;
+    border: 1px solid green;
+    background-color: black;
+}
+
+#output {
+    height: 300px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+}
+
+#input {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: green;
+    border: 1px solid green;
+}
