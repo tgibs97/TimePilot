@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Station Terminal</title>
+    <title>Station TermLink</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
 
@@ -15,14 +15,21 @@
         <h1>============</h1>
         <div class="menu">
             <div class="menu-item" id="station-map">> STATION MAP</div>
-            <div class="menu-item" id="error">> YDVBIJNODXN</div>
-            <div class="menu-item" id="error">> NXCZYPGZ</div>
-            <div class="menu-item" id="error">> MJNOZM</div>
-            <div class="menu-item" id="error">> XJHHN</div>
-            <div class="menu-item" id="error">> XJIOMJGN</div>
+            <div class="menu-item" id="diagnostics">> YDVBIJNODXN</div>
+            <div class="menu-item" id="schedule">> NXCZYPGZ</div>
+            <div class="menu-item" id="roster">> MJNOZM</div>
+            <div class="menu-item" id="comms">> XJHHN</div>
+            <div class="menu-item" id="controls">> XJIOMJGN</div>
+            <div class="menu-item" id="data-key-input">> RESTORE DATA KEY</div>
         </div>
+        <h1>============</h1>
+        <div class="h1-container" id="dataKeyInputContainer">
+            <input type="text" id="dataKeyInput" style="display:none;" />
+            <h1 style="padding-left: 8px;" id="dataKeyH1"></h1>
+        </div>
+
     </div>
-    <script src="scripts/basicTerminal.js"></script>
+    <script src="scripts/menuTerminal.js"></script>
 </body>
 
 </html>

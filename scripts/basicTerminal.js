@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
         'error': 'error.html'
     };
 
+
+
     function updateSelection() {
         menuItems.forEach((item, index) => {
             if (index === selectedIdx) {
@@ -35,8 +37,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 break;
             case 'Enter':
                 const selectedItemId = menuItems[selectedIdx].id;
-                if (pageMappings[selectedItemId]) {
+                if (pageMappings[selectedItemId] && localStorage.getItem(selectedItemId)) {
                     window.location.href = pageMappings[selectedItemId];
+                } else {
+                    window.location.href = 'error.html';
                 }
                 break;
         }
