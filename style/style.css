@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+:root {
+    --bg-screen: black;
+    --terminal-text-color: green;
+    --terminal-inword-color: rgb(16, 193, 16);
+    --terminal-text-font: 'VT323', monospace;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+}
+
+body {
+    font-family: monospace;
+    color: black;
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+
+header {
+    padding: 1em;
+}
+
+.terminal-grid,
+.container {
+    font-family: var(--terminal-text-font);
+    color: var(--terminal-text-color);
+    font-size: 1.125rem;
+    background: var(--bg-screen);
+    padding: 2rem;
+    width: 80%;
+    /* Adjust the width as needed */
+    max-width: 900px;
+    /* Optional: set a max width */
+    height: 80%;
+    /* Adjust the height as needed */
+    max-height: 800px;
+    /* Optional: set a max height */
+    display: grid;
+    grid-template-rows: auto;
+    border-radius: 15%;
+    /* Optional: adjust as needed */
+}
+
+h1 {
+    margin: 0px;
+}
+
+.container {
+    display: block;
+}
+
+.terminal-head {
+    padding-top: 1.25rem;
+    line-height: 0.125rem;
+}
+
+.terminal-body {
+    padding-bottom: 1.25rem;
+    display: none;
+    grid-template-columns: 1fr 3fr 1fr 3fr 3fr
+}
+
+.terminal-col-narrow {
+    display: grid;
+    grid-template-rows: repeat(16, 1fr);
+    kerning: 1rem;
+}
+
+.terminal-col-wide {
+    display: grid;
+    grid-template: repeat(16, 1fr) / repeat(12, 1rem);
+}
+
+.log {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-rows: repeat(16, 1fr);
+}
+
+#input {
+    grid-row: 16;
+}
+
+/* inverse colors for selected characters */
+.selected {
+    background: var(--terminal-text-color);
+    color: var(--bg-screen);
+}
+
+.inword-selected {
+    background: var(--terminal-inword-color);
+}
+
+.terminal-message {
+    display: none;
+    width: 100%;
+}
+
+.terminal-message-block {
+    display: grid;
+    grid-template: repeat(4, 2em) /repeat(8, 2em);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.terminal-message-display {
+    grid-column: 2 / span 6;
+    grid-row: 2 / span 2;
+}
+
+footer {
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    border: solid 2px rgba(44, 255, 0, 0.44);
+}
+
+.corrupted-data {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.bit {
+    font-size: 2rem;
+    margin: 0.5rem;
+    transition: transform 0.5s;
+}
+
+.flipping {
+    transform: rotateX(180deg);
+}
+
+.h1-container {
+    display: flex;
+}
+
+.h1-container h1 {
+    margin: 0 0px;
+    /* Optional: Adds some space between the headings */
+}

@@ -1,24 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TimePilot</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Station Terminal</title>
+    <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul class="nav-container">
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="wiki.html" class="nav-link">Wiki</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="content">
-        <div class="welcome-message">
-            <h1>Welcome to the World of TimePilot</h1>
+
+    <section class="terminal-grid">
+        <div class="terminal-head">
+            <p>Welcome to Hornwright Industrial (TM) Station TermLink</p>
+            <p>Emergency Restore Mode</p>
+            <p>Password Required</p>
+            <p>Attempts Remaining: <span id="attempts"></span></p>
         </div>
-    </div>
+        <div class="terminal-body">
+            <div class="terminal-col-narrow hex"></div>
+            <div class="terminal-col-wide code"></div>
+            <div class="terminal-col-narrow hex"></div>
+            <div class="terminal-col-wide code"></div>
+            <div class="log" id="answers">
+
+            </div>
+        </div>
+        <div class="terminal-message">
+            <div class="terminal-message-block">
+                <div class="terminal-message-border">=</div>
+                <div class="terminal-message-border">=</div>
+                <div class="terminal-message-border">=</div>
+                <div class="terminal-message-border">=</div>
+                <div class="terminal-message-border">=</div>
+                <div class="terminal-message-border">=</div>
+                <div class="terminal-message-border">=</div>
+                <div class="terminal-message-border">=</div>
+                <div class="terminal-message-border">=</div>
+                <div class="terminal-message-border">=</div>
+                <div class="terminal-message-border">=</div>
+                <div class="terminal-message-border">=</div>
+                <div class="terminal-message-border">=</div>
+                <div class="terminal-message-border">=</div>
+                <div class="terminal-message-border">=</div>
+                <div class="terminal-message-border">=</div>
+                <div class="terminal-message-border">=</div>
+                <div class="terminal-message-border">=</div>
+                <div class="terminal-message-border">=</div>
+                <div class="terminal-message-border">=</div>
+                <div class="terminal-message-display" id="display"></div>
+            </div>
+        </div>
+    </section>
+    <script src="scripts/app.js" type="module"></script>
 </body>
+
 </html>
