@@ -361,10 +361,8 @@ export default class Terminal {
             this.chars.push(char);
             side.appendChild(char.div);
         }
-
         // add the words at random
         this.words.forEach((word, i) => {
-
             // find an unused row
             let row = getUnusedRow(i, this.words.length / 2);
 
@@ -372,7 +370,8 @@ export default class Terminal {
             let position;
             do {
                 position = row + random(12);
-            } while (position + this.wordLength > this.MAX_TOTAL_CHARS || usedPositions.has(position));
+            } while (position + this.wordLength > this.MAX_TOTAL_CHARS ||
+                Array.from({ length: this.wordLength }, (_, i) => position + i).some(pos => usedPositions.has(pos)));
 
             // add the word to that position character by character
             word.split('').forEach(character => {

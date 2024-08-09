@@ -93,26 +93,36 @@ document.addEventListener('DOMContentLoaded', function () {
                         case 'kpgnz':
                             localStorage.setItem('diagnostics', true);
                             dataKeyH1.innerHTML = 'DIAGNOSTICS RESTORED'
+                            document.getElementById('diagnostics').innerHTML = '> DIAGNOSTICS'
                             break;
                         case 'odhz':
                             localStorage.setItem('schedule', true);
                             dataKeyH1.innerHTML = 'SCHEDULE RESTORED'
+                            document.getElementById('schedule').innerHTML = '> SCHEDULE'
                             break;
                         case 'hzhwzmn':
                             localStorage.setItem('roster', true);
                             dataKeyH1.innerHTML = 'ROSTER RESTORED'
+                            document.getElementById('roster').innerHTML = '> ROSTER'
                             break;
                         case 'kcjizcjhz':
                             localStorage.setItem('comms', true);
                             dataKeyH1.innerHTML = 'COMMS RESTORED'
+                            document.getElementById('comms').innerHTML = '> COMMS'
                             break;
                         case 'mzywpooji':
                             localStorage.setItem('controls', true);
                             dataKeyH1.innerHTML = 'CONTROLS RESTORED'
+                            document.getElementById('controls').innerHTML = '> CONTROLS'
                             break;
                         case 'reset':
                             resetLocalStorage(itemsToCheck);
                             dataKeyH1.innerHTML = 'VALUES RESET'
+                            document.getElementById('diagnostics').innerHTML = '> YDVBIJNODXN'
+                            document.getElementById('schedule').innerHTML = '> NXCZYPGZ'
+                            document.getElementById('roster').innerHTML = '> MJNOZM'
+                            document.getElementById('comms').innerHTML = '> XJHHN'
+                            document.getElementById('controls').innerHTML = '> XJIOMJGN'
                             break;
                         default:
                             dataKeyH1.innerHTML = 'INVALID KEY'

@@ -164,3 +164,8 @@ footer {
     font-size: 1.75rem;
     outline: none;
 }
+
+.system-message {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
